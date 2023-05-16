@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -7,7 +7,7 @@ form {
     justify-content: center;
 }
 
-ul li {
+ol li {
     display: flex;
     justify-content: center;
 }
@@ -21,7 +21,40 @@ button {
 }
 
 input {
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.risco {
+    text-decoration: rgb(1, 1, 1);
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    padding: 5px;
+    color: #000;
+    padding: 0px;
+}
+
+.risco {
+    text-decoration: line-through;
+}
+
+button:hover{
+    background-color: rgb(246, 225, 66);
+    color: black;
+}
+
+table {
+	list-style-type: lower-roman;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgb(165, 234, 228);
+    
 }

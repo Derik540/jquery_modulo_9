@@ -3,8 +3,13 @@ $(document).ready(function () {
     $('#blt').click(function (e) {
         e.preventDefault()
         let add = $('#tarefa').val()
-        $('ol').append('<li>' + add + '</li>')
-        
+        let listaDeTarefas = []
+        $('ol').append('<li style="font-style: italic;">' + add + '</li>')
+
+        if (add.trim() !== '') {
+            listaDeTarefas.push(add);
+            $('#tarefa').val('');
+        }
     });
 });
 
@@ -18,8 +23,14 @@ $(document).on('dblclick', 'li', function () {
     $(this).toggleClass('risco').fadeOut('slow');
 });
 
-$('#tarefa').focus(function () {
-    $(this).val('')
+$(document).on('click', 'li', function () {
+    $(this).toggleClass('risco')
 })
 
-$('ol').sortable()
+
+
+$('#tarefa').focus(function () {
+    $(this).val('')
+    $('ol').sortable();
+})
+
